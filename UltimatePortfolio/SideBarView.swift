@@ -15,7 +15,14 @@ struct SideBarView: View {
     
     var tagFilters: [Filter]{
         tags.map { tag in
-            Filter(id: tag.id ?? UUID(), name: tag.name ?? "No Name", icon: "tag", tag: tag)
+            Filter(id: tag.tagID, name: tag.tagName, icon: "tag", tag: tag)
+        }
+    }
+    
+    func delete(_ offsets: IndexSet){
+        for offset in offsets{
+            let item = tags[offset]
+            dataController.delete(item)
         }
     }
     
@@ -31,10 +38,12 @@ struct SideBarView: View {
             
             Section("Tags"){
                 ForEach(tagFilters) { filter in
-                    NavigationLink(value: filter) {
+                    NavigationLink(value: filter) { 
                         Label(filter.name, systemImage: filter.icon)
+                            .badge(filter.tag?.tagActiveIssue.count ?? 0)
                     }
                 }
+                .onDelete(perform: delete)
             }
         }
         .toolbar{
