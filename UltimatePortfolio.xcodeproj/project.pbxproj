@@ -21,6 +21,11 @@
 		64D22ACD2A5D35A4001A02B1 /* SideBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D22ACC2A5D35A4001A02B1 /* SideBarView.swift */; };
 		64D22ACF2A5D35B0001A02B1 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D22ACE2A5D35B0001A02B1 /* DetailView.swift */; };
 		64D22AD12A5D37D9001A02B1 /* Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D22AD02A5D37D9001A02B1 /* Filter.swift */; };
+		64D2FC6D2A72CE40001A8F90 /* Bundle-Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D2FC6C2A72CE40001A8F90 /* Bundle-Decodable.swift */; };
+		64DBF0D12A73DD5800A3A12A /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 64DBF0CF2A73DD5800A3A12A /* Colors.xcassets */; };
+		64DBF0D22A73DD5800A3A12A /* Awards.json in Resources */ = {isa = PBXBuildFile; fileRef = 64DBF0D02A73DD5800A3A12A /* Awards.json */; };
+		64DBF0D42A73E39D00A3A12A /* Award.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64DBF0D32A73E39D00A3A12A /* Award.swift */; };
+		64DBF0D62A73E4D000A3A12A /* AwardsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64DBF0D52A73E4D000A3A12A /* AwardsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +46,11 @@
 		64D22ACC2A5D35A4001A02B1 /* SideBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideBarView.swift; sourceTree = "<group>"; };
 		64D22ACE2A5D35B0001A02B1 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		64D22AD02A5D37D9001A02B1 /* Filter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Filter.swift; sourceTree = "<group>"; };
+		64D2FC6C2A72CE40001A8F90 /* Bundle-Decodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle-Decodable.swift"; sourceTree = "<group>"; };
+		64DBF0CF2A73DD5800A3A12A /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		64DBF0D02A73DD5800A3A12A /* Awards.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Awards.json; sourceTree = "<group>"; };
+		64DBF0D32A73E39D00A3A12A /* Award.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Award.swift; sourceTree = "<group>"; };
+		64DBF0D52A73E4D000A3A12A /* AwardsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AwardsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +86,7 @@
 				64D22ACB2A5D335D001A02B1 /* Info.plist */,
 				64862AB32A58472B0056F8BE /* UltimatePortfolioApp.swift */,
 				64D22ACC2A5D35A4001A02B1 /* SideBarView.swift */,
+				64D2FC6C2A72CE40001A8F90 /* Bundle-Decodable.swift */,
 				64862AB52A58472B0056F8BE /* ContentView.swift */,
 				64D22AD02A5D37D9001A02B1 /* Filter.swift */,
 				64D22ACE2A5D35B0001A02B1 /* DetailView.swift */,
@@ -84,10 +95,14 @@
 				64A982242A6FEEEB00323AE2 /* IssueView.swift */,
 				64862AC22A5847680056F8BE /* Main.xcdatamodeld */,
 				64862AC52A58481A0056F8BE /* DataController.swift */,
-				64862AB72A58472D0056F8BE /* Assets.xcassets */,
 				64862AB92A58472D0056F8BE /* UltimatePortfolio.entitlements */,
 				64BD383E2A69110D00FD885C /* Issue-CoreDataHelper.swift */,
 				64BD38402A69151D00FD885C /* Tag-CoreDataHelper.swift */,
+				64DBF0D02A73DD5800A3A12A /* Awards.json */,
+				64DBF0D32A73E39D00A3A12A /* Award.swift */,
+				64DBF0D52A73E4D000A3A12A /* AwardsView.swift */,
+				64862AB72A58472D0056F8BE /* Assets.xcassets */,
+				64DBF0CF2A73DD5800A3A12A /* Colors.xcassets */,
 				64862ABA2A58472D0056F8BE /* Preview Content */,
 			);
 			path = UltimatePortfolio;
@@ -159,6 +174,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				64DBF0D12A73DD5800A3A12A /* Colors.xcassets in Resources */,
+				64DBF0D22A73DD5800A3A12A /* Awards.json in Resources */,
 				64862ABC2A58472D0056F8BE /* Preview Assets.xcassets in Resources */,
 				64862AB82A58472D0056F8BE /* Assets.xcassets in Resources */,
 			);
@@ -172,9 +189,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				64D22AD12A5D37D9001A02B1 /* Filter.swift in Sources */,
+				64DBF0D42A73E39D00A3A12A /* Award.swift in Sources */,
+				64DBF0D62A73E4D000A3A12A /* AwardsView.swift in Sources */,
 				64862AC42A5847680056F8BE /* Main.xcdatamodeld in Sources */,
 				64D22ACF2A5D35B0001A02B1 /* DetailView.swift in Sources */,
 				64BD383F2A69110D00FD885C /* Issue-CoreDataHelper.swift in Sources */,
+				64D2FC6D2A72CE40001A8F90 /* Bundle-Decodable.swift in Sources */,
 				64862AC62A58481A0056F8BE /* DataController.swift in Sources */,
 				64862AB62A58472B0056F8BE /* ContentView.swift in Sources */,
 				64D22ACD2A5D35A4001A02B1 /* SideBarView.swift in Sources */,

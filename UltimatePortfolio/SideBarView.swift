@@ -17,6 +17,8 @@ struct SideBarView: View {
     @State private var renamingTag = false
     @State private var tagName = ""
     
+    @State private var showingAwards = false
+    
     var tagFilters: [Filter]{
         tags.map { tag in
             Filter(id: tag.tagID, name: tag.tagName, icon: "tag", tag: tag)
@@ -84,6 +86,12 @@ struct SideBarView: View {
                 Label("Add tag", systemImage: "plus")
             }
             
+            Button{
+                showingAwards.toggle()
+            }label: {
+                Label("Show awards", systemImage: "rosette")
+            }
+            
             #if DEBUG
             Button{
                 dataController.deleteAll()
@@ -98,6 +106,7 @@ struct SideBarView: View {
             Button("Cancel", role: .cancel){ }
             TextField("New tag name", text: $tagName)
         }
+        .sheet(isPresented: $showingAwards, content: AwardsView.init)
     }
 }
 
