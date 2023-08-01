@@ -109,7 +109,7 @@ class DataController: ObservableObject{
     func queueSave(){
         saveTask?.cancel()
         saveTask = Task{ @MainActor in
-            try await Task.sleep(for: .seconds(5))
+            try await Task.sleep(for: .seconds(3))
             save()
         }
     }
@@ -190,7 +190,7 @@ class DataController: ObservableObject{
         
         let request = Issue.fetchRequest()
         request.predicate = NSCompoundPredicate(andPredicateWithSubpredicates: predicates)
-        request.sortDescriptors = [NSSortDescriptor(key: sortType.rawValue, ascending: sortNewestFirst)]
+        request.sortDescriptors = [NSSortDescriptor(key: sortType.rawValue, ascending: !sortNewestFirst)]
         let allIssues = (try? container.viewContext.fetch(request)) ?? []
         
         return allIssues

@@ -48,6 +48,10 @@ extension Issue{
         }
     }
     
+    var issueFormattedDate: String {
+        issueCreationDate.formatted(date: .numeric, time: .omitted)
+    }
+    
     static var exampleIssue: Issue{
         let controller = DataController(inMemory: true)
         let viewContext = controller.container.viewContext
